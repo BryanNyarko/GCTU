@@ -1,0 +1,103 @@
+<DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Bryan Nyarko-Forms</title>
+	 <meta name:"viewport"  content="width=device=width, initial-scale=1.0">
+  </head>
+  
+  <style>
+    .header{background-image:url("head.png");
+	        height:50%;
+			 background-position: center;
+             background-repeat: no-repeat;
+             background-size: cover;
+             position: relative;}
+			 
+	.headtext{ text-align: center;
+               position: absolute;
+               top: 40%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               color:#333333;}
+	
+    body{
+	     justify-items:center;
+		 align-items:center;
+		 background-size:cover;}
+		 
+
+	
+   #name,#email,#phone{ margin:5px;
+	                    display:grid;}
+   
+	form{background-color:rgba(0,0,0,.7);
+		 padding-top:5px;
+		 padding-left:5px;
+		 padding-right:5px;
+		 padding-bottom:5px;
+		 border:2px solid black;
+		 border-radius:10px;
+		 color:white;
+		 max-width:500px;
+		margin: 0 auto;}
+
+    #submit{color:black;
+		   position:right;
+			margin-left:150px;
+			background-color:white;
+			opacity:.6}
+    
+	#submit:hover{background-color:white;
+	              transition:0.3s;
+				  opacity:1;}
+				  
+	section{margin-top:100px;}
+	
+  </style>
+  
+  <body> 
+ <div class="header">
+     <div class="headtext">
+    <h1>CLEAR PATH FOREX</h1>
+     </div>
+  </div>
+	
+	<section>
+	<div class="formcase">
+	<form id="myForm">
+	  <label>Name:<input type="text" id="name"></label><br>
+	
+	   <label for="email">Email:</label>
+	   <input type="email" id="email"  placeholder="mmmm@gmail.com"><br>
+	   
+	   <label for="phone" >Phone number:</label>
+	   <input type="tel" id="phone"><br>
+	   
+	   <input type="button" value="submit" id="submit" title="click to continue">
+	  </div>
+	  
+	</form>
+	
+
+    <script>
+    document.getElementById('submit').addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+    
+      if (name === '' || phone === '' || email === '') {
+        alert('Please make sure to fill out all fields in the form correctly before proceeding.');
+      } else {
+        window.location.href = 'page1.html';
+      }
+    });
+   </script>
+ </section>  
+  
+  </body>
+  
+ 
+ 
+</html>
